@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -20,216 +21,250 @@
     --gold: #d4a85a;
     --gold-light: #e8c88a;
 
-    --font-heading: 'PP Editorial New', 'Editorial New', Georgia, serif;
-    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+```
+--font-heading: 'PP Editorial New', 'Editorial New', Georgia, serif;
+--font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+```
+
+}
+
+- {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   }
 
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+html {
+scroll-behavior: smooth;
+}
 
-  html {
-    scroll-behavior: smooth;
-  }
+body {
+background-color: var(–black);
+color: var(–off-white);
+font-family: var(–font-body);
+font-weight: 300;
+font-size: 16px;
+line-height: 1.7;
+min-height: 100vh;
+overflow-x: hidden;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+background-image:
+radial-gradient(circle at 15% 20%, rgba(212, 168, 90, 0.06) 0%, transparent 50%),
+radial-gradient(circle at 85% 80%, rgba(212, 168, 90, 0.04) 0%, transparent 50%);
+background-attachment: fixed;
+}
 
-  body {
-    background-color: var(--black);
-    color: var(--off-white);
-    font-family: var(--font-body);
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 1.7;
-    min-height: 100vh;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background-image:
-      radial-gradient(circle at 15% 20%, rgba(212, 168, 90, 0.06) 0%, transparent 50%),
-      radial-gradient(circle at 85% 80%, rgba(212, 168, 90, 0.04) 0%, transparent 50%);
-    background-attachment: fixed;
-  }
+.page {
+max-width: 780px;
+margin: 0 auto;
+padding: 100px 48px 80px;
+}
 
-  .page {
-    max-width: 100px;
-    margin: 0 auto;
-    padding: 100px 48px 80px;
-  }
+.brand {
+display: flex;
+align-items: center;
+gap: 14px;
+margin-bottom: 40px;
+white-space: nowrap;
+}
 
-  .brand {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    margin-bottom: 40px;
-    white-space: nowrap;
-  }
+.brand-logo {
+width: 48px;
+height: 48px;
+flex-shrink: 0;
+}
 
-  .brand-logo {
-    width: 48px;
-    height: 48px;
-    flex-shrink: 0;
-  }
+.brand-logo svg {
+width: 100%;
+height: 100%;
+display: block;
+}
 
-  .brand-logo svg {
-    width: 100%;
-    height: 100%;
-    display: block;
-  }
+.brand-name {
+font-family: var(–font-body);
+font-size: 11px;
+font-weight: 500;
+letter-spacing: 0.28em;
+text-transform: uppercase;
+color: var(–off-white);
+white-space: nowrap;
+}
 
-  .brand-name {
-    font-family: var(--font-body);
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.28em;
-    text-transform: uppercase;
-    color: var(--off-white);
-    white-space: nowrap;
-  }
+.eyebrow {
+font-family: var(–font-body);
+font-size: 11px;
+font-weight: 400;
+letter-spacing: 0.28em;
+text-transform: uppercase;
+color: var(–gold);
+margin-bottom: 28px;
+display: flex;
+align-items: center;
+gap: 14px;
+white-space: nowrap;
+}
 
-  .eyebrow {
-    font-family: var(--font-body);
-    font-size: 11px;
-    font-weight: 400;
-    letter-spacing: 0.28em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 28px;
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    white-space: nowrap;
-  }
+.eyebrow::before {
+content: ‘’;
+width: 32px;
+height: 1px;
+background-color: var(–gold);
+flex-shrink: 0;
+}
 
-  .eyebrow::before {
-    content: '';
-    width: 32px;
-    height: 1px;
-    background-color: var(--gold);
-    flex-shrink: 0;
-  }
+h1 {
+font-family: var(–font-heading);
+font-weight: 400;
+font-size: clamp(42px, 6vw, 64px);
+line-height: 1.2;
+letter-spacing: -0.02em;
+color: var(–off-white);
+margin-bottom: 32px;
+}
 
-  h1 {
-    font-family: var(--font-heading);
-    font-weight: 400;
-    font-size: clamp(42px, 6vw, 64px);
-    line-height: 1.2;
-    letter-spacing: -0.02em;
-    color: var(--off-white);
-    margin-bottom: 32px;
-  }
+h1 em {
+font-style: italic;
+color: var(–gold-light);
+}
 
-  h1 em {
-    font-style: italic;
-    color: var(--gold-light);
-  }
+.intro {
+font-size: 17px;
+line-height: 1.7;
+color: var(–gray-3);
+max-width: 620px;
+margin-bottom: 72px;
+font-weight: 300;
+}
 
-  .intro {
-    font-size: 17px;
-    line-height: 1.7;
-    color: var(--gray-3);
-    max-width: 620px;
-    margin-bottom: 72px;
-    font-weight: 300;
-  }
+.section {
+margin-bottom: 56px;
+}
 
-  .section {
-    margin-bottom: 56px;
-  }
+.section:last-of-type {
+margin-bottom: 0;
+}
 
-  .section:last-of-type {
-    margin-bottom: 0;
-  }
+h2 {
+font-family: var(–font-heading);
+font-weight: 400;
+font-size: 32px;
+line-height: 1.2;
+letter-spacing: -0.01em;
+color: var(–off-white);
+margin-bottom: 18px;
+display: flex;
+align-items: baseline;
+gap: 16px;
+}
 
-  h2 {
-    font-family: var(--font-heading);
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 1.2;
-    letter-spacing: -0.01em;
-    color: var(--off-white);
-    margin-bottom: 18px;
-    display: flex;
-    align-items: baseline;
-    gap: 16px;
-  }
+.section-number {
+font-family: var(–font-body);
+font-size: 12px;
+font-weight: 400;
+color: var(–gold);
+letter-spacing: 0.15em;
+min-width: 28px;
+}
 
-  .section-number {
-    font-family: var(--font-body);
-    font-size: 12px;
-    font-weight: 400;
-    color: var(--gold);
-    letter-spacing: 0.15em;
-    min-width: 28px;
-  }
+.section p {
+color: var(–gray-3);
+max-width: 620px;
+margin-left: 44px;
+}
 
-  .section p {
-    color: var(--gray-3);
-    max-width: 620px;
-    margin-left: 44px;
-  }
+.section p + p {
+margin-top: 16px;
+}
 
-  .section p + p {
-    margin-top: 16px;
-  }
+.closing {
+margin-top: 80px;
+padding: 36px 0 0;
+border-top: 1px solid var(–dark-2);
+}
 
-  .closing {
-    margin-top: 80px;
-    padding: 36px 0 0;
-    border-top: 1px solid var(--dark-2);
-  }
+.closing p {
+color: var(–gray-3);
+max-width: 620px;
+margin-bottom: 40px;
+}
 
-  .closing p {
-    color: var(--gray-3);
-    max-width: 620px;
-    margin-bottom: 40px;
-  }
+.signoff {
+font-family: var(–font-body);
+font-size: 13px;
+font-weight: 500;
+letter-spacing: 0.06em;
+color: var(–gold);
+display: flex;
+align-items: center;
+gap: 14px;
+flex-wrap: wrap;
+}
 
-  .signoff {
-    font-family: var(--font-body);
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 0.06em;
-    color: var(--gold);
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    flex-wrap: wrap;
-  }
+.signoff a {
+color: var(–gold);
+text-decoration: none;
+transition: color 0.2s ease;
+}
 
-  .signoff a {
-    color: var(--gold);
-    text-decoration: none;
-    transition: color 0.2s ease;
-  }
+.signoff a:hover {
+color: var(–gold-light);
+}
 
-  .signoff a:hover {
-    color: var(--gold-light);
-  }
+.signoff .sep {
+color: var(–dark-2);
+font-weight: 300;
+}
 
-  .signoff .sep {
-    color: var(--dark-2);
-    font-weight: 300;
-  }
+@media (max-width: 640px) {
+.page {
+padding: 56px 20px 48px;
+}
 
-  @media (max-width: 640px) {
-    .page {
-      padding: 72px 28px 64px;
-    }
+```
+h1 {
+  font-size: 40px;
+  line-height: 1.15;
+}
 
-    .section p {
-      margin-left: 0;
-    }
+.intro {
+  font-size: 16px;
+}
 
-    h2 {
-      flex-direction: column;
-      gap: 8px;
-    }
+.section p {
+  margin-left: 0;
+}
 
-    .section-number {
-      min-width: 0;
-    }
-  }
+h2 {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: 26px;
+}
+
+.section-number {
+  min-width: 0;
+}
+
+.brand-logo {
+  width: 40px;
+  height: 40px;
+}
+
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  white-space: normal;
+}
+
+.eyebrow::before {
+  width: 24px;
+}
+```
+
+}
 </style>
+
 </head>
 <body>
   <main class="page">
@@ -266,37 +301,40 @@
       </span>
     </div>
 
-    <div class="eyebrow">Lindsay&nbsp;Dev&nbsp;Creative</div>
+```
+<div class="eyebrow">Lindsay&nbsp;Dev&nbsp;Creative</div>
 
-    <h1>Welcome to your<br><em>client portal</em></h1>
+<h1>Welcome to your<br><em>client portal</em></h1>
 
-    <p class="intro">
-      This is your shared space for everything we're working on together at Lindsay&nbsp;Dev&nbsp;Creative. Here's a quick overview of what you'll find inside.
-    </p>
+<p class="intro">
+  This is your shared space for everything we're working on together at Lindsay&nbsp;Dev&nbsp;Creative. Here's a quick overview of what you'll find inside.
+</p>
 
-    <section class="section">
-      <h2><span class="section-number">01</span>Admin</h2>
-      <p>Your business paperwork lives here, including contracts, agreements, invoices, receipts, proposals, and SOWs. Anytime you need to reference something official tied to the project, check here.</p>
-    </section>
+<section class="section">
+  <h2><span class="section-number">01</span>Admin</h2>
+  <p>Your business paperwork lives here, including contracts, agreements, invoices, receipts, proposals, and SOWs. Anytime you need to reference something official tied to the project, check here.</p>
+</section>
 
-    <section class="section">
-      <h2><span class="section-number">02</span>Website</h2>
-      <p>All website-related files live here. This includes page content, images, copy docs, and anything else tied to your site.</p>
-    </section>
+<section class="section">
+  <h2><span class="section-number">02</span>Website</h2>
+  <p>All website-related files live here. This includes page content, images, copy docs, and anything else tied to your site.</p>
+</section>
 
-    <section class="section">
-      <h2><span class="section-number">03</span>Branding &amp; Logos</h2>
-      <p>This is where your brand lives. Drop any materials here: logos, fonts, color specs, photography, past marketing assets. You can drag and drop from your desktop, or use the + New button in Drive to upload.</p>
-      <p>Anytime you need your logo, color palette, or other brand files, this is where to grab them.</p>
-    </section>
+<section class="section">
+  <h2><span class="section-number">03</span>Branding &amp; Logos</h2>
+  <p>This is where your brand lives. Drop any materials here: logos, fonts, color specs, photography, past marketing assets. You can drag and drop from your desktop, or use the + New button in Drive to upload.</p>
+  <p>Anytime you need your logo, color palette, or other brand files, this is where to grab them.</p>
+</section>
 
-    <div class="closing">
-      <p>If you have questions or need a file you're not seeing, just reach out through the Communication Hub in Notion. I'm happy to help.</p>
+<div class="closing">
+  <p>If you have questions or need a file you're not seeing, just reach out through the Communication Hub in Notion. I'm happy to help.</p>
 
-      <div class="signoff">
-        <span>Lindsay&nbsp;Dev&nbsp;Creative</span>
-      </div>
-    </div>
+  <div class="signoff">
+    <span>Lindsay&nbsp;Dev&nbsp;Creative</span>
+  </div>
+</div>
+```
+
   </main>
 </body>
 </html>
